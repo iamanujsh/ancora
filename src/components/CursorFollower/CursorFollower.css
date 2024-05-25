@@ -6,10 +6,9 @@
   height: 13px;
   border-radius: 100%;
   background-color: black;
-  filter: hue-rotate(180deg) brightness(0.8);
-  mix-blend-mode: exclusion;
+  mix-blend-mode: inherit;
   opacity: 0;
-  z-index: 10000;
+  z-index: 100000;
   user-select: none;
   pointer-events: none;
 }

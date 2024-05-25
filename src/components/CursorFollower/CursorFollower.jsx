@@ -14,6 +14,7 @@ const CursorFollower = () => {
     window.addEventListener("mousemove", (e) => {
       const { target, x, y } = e;
       const isTargetBtn = target?.closest("button");
+      const isTargetSpan = target?.closest("span");
       gsap.to(cursor, {
         x: x - 9,
         y: y - 10,
@@ -21,7 +22,7 @@ const CursorFollower = () => {
         ease: "power2.out",
         backgroundColor: isTargetBtn ? "white" : "black",
         opacity: 1,
-        // transform: `scale(${isTargetLinkOrBtn ? 3.5 : 1})`,
+        transform: `scale(${isTargetSpan ? 3.5 : 1})`,
       });
     });
     document.addEventListener("mouseleave", () => {
