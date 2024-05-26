@@ -2,7 +2,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
-import "./GrowingCircle.css";
+import { FaArrowDownLong } from "react-icons/fa6";
+
+// import "./GrowingCircle.css";
 
 const GrowingCircle = () => {
   const circleRef = useRef(null);
@@ -28,8 +30,14 @@ const GrowingCircle = () => {
   });
 
   return (
-    <div className="circle-container">
-      <div ref={circleRef} className="dot"></div>;
+    <div>
+      <div className="flex flex-col items-center justify-center mt-40 ">
+        <FaArrowDownLong className="text-white absolute w-7 h-7 z-40" />
+        <div ref={circleRef} className="w-16 h-16 bg-black rounded-full"></div>
+      </div>
+      <div className="flex justify-center mt-20 ">
+        <h1 className="z-40 text-white">Dynamic Background</h1>
+      </div>
     </div>
   );
 };
