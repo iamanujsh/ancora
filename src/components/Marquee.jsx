@@ -3,18 +3,11 @@ import React, { useEffect } from "react";
 
 const Marquee = () => {
   useEffect(() => {
-    gsap
-      .to(".marquee_part", {
-        xPercent: -100,
-        repeat: -1,
-        yoyo: true,
-        duration: 10,
-        ease: "linear",
-      })
-      .totalProgress(0.5);
-
-    gsap.set(".marquee_inner", {
-      xPercent: -50,
+    gsap.to(".marquee_part", {
+      xPercent: -100,
+      repeat: -1,
+      duration: 10,
+      ease: "linear",
     });
   }, []);
 
