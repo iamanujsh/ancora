@@ -21,8 +21,8 @@ const CursorFollower = () => {
         duration: 1.3,
         ease: "power2.out",
         backgroundColor: isTargetBtn ? "white" : "black",
-        opacity: 1,
-        transform: `scale(${isTargetSpan ? 3.5 : 1})`,
+        opacity: isTargetSpan ? 0.5 : 1,
+        transform: `scale(${isTargetSpan ? 1.5 : 1})`,
       });
     });
     document.addEventListener("mouseleave", () => {
