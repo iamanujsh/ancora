@@ -92,53 +92,55 @@ const IntroSection = () => {
 
   return (
     <>
-      <h1 className=" text-center text-8xl font-semibold mt-10 tracking-tight">
-        Visual Effects & Animation Kit
-      </h1>
-      <div className="flex justify-center py-10 ">
-        <div className="flex gap-x-9 text-[20vw] font-bold ">
-          <div ref={firstMoveRef} className="relative -top-20">
-            <GsapMagnetic>
-              <span className="text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
-                Text
-              </span>
-            </GsapMagnetic>
-            <h4 className="gradient-text">P</h4>
-          </div>
-          <div ref={lMoveRef} className="relative -bottom-14">
-            <GsapMagnetic>
-              <span className="mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
-                Mouse
-              </span>
-            </GsapMagnetic>
-            <h4 className="gradient-text">L</h4>
-          </div>
-          <div ref={secondMoveRef} className="relative -top-20 ">
-            <h4 className="gradient-text">U</h4>
-          </div>
-          <div ref={gMoveRef} className="relative -bottom-14">
-            <GsapMagnetic>
-              <span className="dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
-                Dynamic
-              </span>
-            </GsapMagnetic>
-            <h4 className="gradient-text">G</h4>
-          </div>
-          <div ref={thirdMoveRef} className="relative -top-20 ">
-            <GsapMagnetic>
-              <span className="image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
-                Image
-              </span>
-            </GsapMagnetic>
-            <h4 className="gradient-text">I</h4>
-          </div>
-          <div ref={nMoveRef} className="relative -bottom-14">
-            <GsapMagnetic>
-              <span className="background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
-                Background
-              </span>
-            </GsapMagnetic>
-            <h4 className="gradient-text">N</h4>
+      <div className="relative z-50 ">
+        <h1 className=" text-center text-8xl font-semibold mt-10 tracking-tight">
+          Visual Effects & Animation Kit
+        </h1>
+        <div className="flex justify-center pb-10 bg-white">
+          <div className="flex gap-x-9 text-[20vw] font-bold ">
+            <div ref={firstMoveRef} className="relative -top-20">
+              <GsapMagnetic>
+                <span className="text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
+                  Text
+                </span>
+              </GsapMagnetic>
+              <h4 className="gradient-text">P</h4>
+            </div>
+            <div ref={lMoveRef} className="relative -bottom-14">
+              <GsapMagnetic>
+                <span className="mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
+                  Mouse
+                </span>
+              </GsapMagnetic>
+              <h4 className="gradient-text">L</h4>
+            </div>
+            <div ref={secondMoveRef} className="relative -top-20 ">
+              <h4 className="gradient-text">U</h4>
+            </div>
+            <div ref={gMoveRef} className="relative -bottom-14">
+              <GsapMagnetic>
+                <span className="dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
+                  Dynamic
+                </span>
+              </GsapMagnetic>
+              <h4 className="gradient-text">G</h4>
+            </div>
+            <div ref={thirdMoveRef} className="relative -top-20 ">
+              <GsapMagnetic>
+                <span className="image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
+                  Image
+                </span>
+              </GsapMagnetic>
+              <h4 className="gradient-text">I</h4>
+            </div>
+            <div ref={nMoveRef} className="relative -bottom-14">
+              <GsapMagnetic>
+                <span className="background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
+                  Background
+                </span>
+              </GsapMagnetic>
+              <h4 className="gradient-text">N</h4>
+            </div>
           </div>
         </div>
       </div>

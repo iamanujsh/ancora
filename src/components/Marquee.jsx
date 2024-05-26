@@ -12,7 +12,7 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className="marquee bg-black text-white py-6 mb-10 font-semibold relative overflow-hidden">
+    <div className="marquee bg-black text-white py-6  font-semibold relative overflow-hidden z-40">
       <div className="marquee_inner uppercase text-2xl w-fit flex">
         <div className="marquee_part px-1 shrink-0">
           EVERYTHING YOU SEE WILL BE INSIDE THE PRODUCT
