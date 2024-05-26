@@ -18,7 +18,7 @@ const IntroSection = () => {
     const t3 = gsap.timeline({ repeat: -1, yoyo: true });
 
     tl.to(lMoveRef.current, {
-      y: -200,
+      y: -130,
       ease: "power1.out",
       duration: 4,
     }).to(lMoveRef.current, {
@@ -28,7 +28,7 @@ const IntroSection = () => {
     });
 
     t2.to(gMoveRef.current, {
-      y: -200,
+      y: -130,
       ease: "power1.out",
       duration: 4,
     }).to(gMoveRef.current, {
@@ -38,7 +38,7 @@ const IntroSection = () => {
     });
 
     t3.to(nMoveRef.current, {
-      y: -200,
+      y: -130,
       ease: "power1.out",
       duration: 4,
     }).to(nMoveRef.current, {
@@ -54,7 +54,7 @@ const IntroSection = () => {
     const t3 = gsap.timeline({ repeat: -1, yoyo: true });
 
     tl.to(firstMoveRef.current, {
-      y: 200,
+      y: 130,
       ease: "power1.out",
       duration: 4,
     }).to(firstMoveRef.current, {
@@ -64,7 +64,7 @@ const IntroSection = () => {
     });
 
     t2.to(secondMoveRef.current, {
-      y: 200,
+      y: 130,
       ease: "power1.out",
       duration: 4,
     }).to(secondMoveRef.current, {
@@ -74,7 +74,7 @@ const IntroSection = () => {
     });
 
     t3.to(thirdMoveRef.current, {
-      y: 200,
+      y: 130,
       ease: "power1.out",
       duration: 4,
     }).to(thirdMoveRef.current, {
@@ -91,39 +91,39 @@ const IntroSection = () => {
 
   return (
     <>
-      <h1 className=" text-center text-8xl font-semibold mt-10 tracking-tighter">
+      <h1 className=" text-center text-8xl font-semibold mt-10 tracking-tight">
         Visual Effects & Animation Kit
       </h1>
       <div className="flex justify-center py-10 ">
-        <div className="flex gap-x-10 text-[20vw] font-bold ">
-          <div ref={firstMoveRef} className="relative -top-28">
+        <div className="flex gap-x-9 text-[20vw] font-bold ">
+          <div ref={firstMoveRef} className="relative -top-20">
             <span className="text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
               Text
             </span>
             <h4 className="gradient-text">P</h4>
           </div>
-          <div ref={lMoveRef} className="relative -bottom-32">
+          <div ref={lMoveRef} className="relative -bottom-14">
             <span className="mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
               Mouse
             </span>
             <h4 className="gradient-text">L</h4>
           </div>
-          <div ref={secondMoveRef} className="relative -top-28 ">
+          <div ref={secondMoveRef} className="relative -top-20 ">
             <h4 className="gradient-text">U</h4>
           </div>
-          <div ref={gMoveRef} className="relative -bottom-32">
+          <div ref={gMoveRef} className="relative -bottom-14">
             <span className="dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
               Dynamic
             </span>
             <h4 className="gradient-text">G</h4>
           </div>
-          <div ref={thirdMoveRef} className="relative -top-28 ">
+          <div ref={thirdMoveRef} className="relative -top-20 ">
             <span className="image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
               Image
             </span>
             <h4 className="gradient-text">I</h4>
           </div>
-          <div ref={nMoveRef} className="relative -bottom-32">
+          <div ref={nMoveRef} className="relative -bottom-14">
             <span className="background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
               Background
             </span>

@@ -11,7 +11,7 @@ const navbarList = [
 
 const Navbar = () => {
   return (
-    <div className="flex justify-around p-4 items-center">
+    <div className="flex justify-around p-4 py-8 items-center">
       <img
         src="https://trx-effects.ancorathemes.com/wp-content/uploads/2021/04/logo-2x.png"
         alt="ancoraLogo"
