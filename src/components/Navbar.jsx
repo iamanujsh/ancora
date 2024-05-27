@@ -1,4 +1,5 @@
 import React from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const navbarList = [
   { href: "/dynamicBackground", title: "Dynamic Background" },
@@ -11,13 +12,13 @@ const navbarList = [
 
 const Navbar = () => {
   return (
-    <div className="flex justify-around p-4 py-8 items-center">
+    <div className="flex lg:justify-around justify-between p-10 lg:p-4 py-8 items-center ">
       <img
         src="https://trx-effects.ancorathemes.com/wp-content/uploads/2021/04/logo-2x.png"
         alt="ancoraLogo"
         className="h-8 cursor-pointer"
       />
-      <div className="flex">
+      <div className="lg:flex hidden">
         {navbarList.map((navList) => (
           <a
             key={navList.href}
@@ -29,9 +30,10 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <button className="bg-white text-black border-black border-2 hover:bg-black hover:text-white py-3 px-14 rounded-full transition-all duration-300">
+      <button className="lg:block hidden bg-white text-black border-black border-2 hover:bg-black hover:text-white py-3 px-14 rounded-full transition-all duration-300">
         Buy Now
       </button>
+      <RxHamburgerMenu className="sm:block block lg:hidden" />
     </div>
   );
 };

@@ -22,7 +22,7 @@ const CursorFollower = () => {
         ease: "power2.out",
         backgroundColor: isTargetBtn ? "white" : "black",
         opacity: isTargetSpan ? 0.5 : 1,
-        transform: `scale(${isTargetSpan ? 1.5 : 1})`,
+        transform: `scale(${isTargetSpan ? 2.5 : 1})`,
       });
     });
     document.addEventListener("mouseleave", () => {

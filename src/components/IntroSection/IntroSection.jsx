@@ -93,14 +93,14 @@ const IntroSection = () => {
   return (
     <>
       <div className="relative z-50 ">
-        <h1 className=" text-center text-8xl font-semibold mt-10 tracking-tight">
+        <h1 className=" text-center text-[5vw] font-semibold mt-10 tracking-tight">
           Visual Effects & Animation Kit
         </h1>
         <div className="flex justify-center pb-10 bg-white">
-          <div className="flex gap-x-9 text-[20vw] font-bold ">
+          <div className="flex lg:gap-x-9 gap-x-2 text-[20vw] font-bold ">
             <div ref={firstMoveRef} className="relative -top-20">
               <GsapMagnetic>
-                <span className="text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
+                <span className="lg:block hidden text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
                   Text
                 </span>
               </GsapMagnetic>
@@ -108,7 +108,7 @@ const IntroSection = () => {
             </div>
             <div ref={lMoveRef} className="relative -bottom-14">
               <GsapMagnetic>
-                <span className="mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
+                <span className="lg:block hidden mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
                   Mouse
                 </span>
               </GsapMagnetic>
@@ -119,7 +119,7 @@ const IntroSection = () => {
             </div>
             <div ref={gMoveRef} className="relative -bottom-14">
               <GsapMagnetic>
-                <span className="dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
+                <span className="lg:block hidden dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
                   Dynamic
                 </span>
               </GsapMagnetic>
@@ -127,7 +127,7 @@ const IntroSection = () => {
             </div>
             <div ref={thirdMoveRef} className="relative -top-20 ">
               <GsapMagnetic>
-                <span className="image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
+                <span className="lg:block hidden image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
                   Image
                 </span>
               </GsapMagnetic>
@@ -135,7 +135,7 @@ const IntroSection = () => {
             </div>
             <div ref={nMoveRef} className="relative -bottom-14">
               <GsapMagnetic>
-                <span className="background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
+                <span className="lg:block hidden background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
                   Background
                 </span>
               </GsapMagnetic>
