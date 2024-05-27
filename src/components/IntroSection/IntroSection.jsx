@@ -86,8 +86,44 @@ const IntroSection = () => {
   };
 
   useEffect(() => {
-    animateUpDown();
-    animateDownUp();
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    if (mediaQuery.matches) {
+      animateUpDown();
+      animateDownUp();
+    }
+
+    const handleResize = () => {
+      if (mediaQuery.matches) {
+        animateUpDown();
+        animateDownUp();
+      } else {
+        gsap.set(
+          [
+            firstMoveRef.current,
+            secondMoveRef.current,
+            thirdMoveRef.current,
+            lMoveRef.current,
+            gMoveRef.current,
+            nMoveRef.current,
+          ],
+          { y: 0 }
+        );
+        gsap.killTweensOf([
+          firstMoveRef.current,
+          secondMoveRef.current,
+          thirdMoveRef.current,
+          lMoveRef.current,
+          gMoveRef.current,
+          nMoveRef.current,
+        ]);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
   }, []);
 
   return (
@@ -98,7 +134,7 @@ const IntroSection = () => {
         </h1>
         <div className="flex justify-center pb-10 bg-white">
           <div className="flex lg:gap-x-9 gap-x-2 text-[20vw] font-bold ">
-            <div ref={firstMoveRef} className="relative -top-20">
+            <div ref={firstMoveRef} className="relative lg:-top-20">
               <GsapMagnetic>
                 <span className="lg:block hidden text-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
                   Text
@@ -106,7 +142,7 @@ const IntroSection = () => {
               </GsapMagnetic>
               <h4 className="gradient-text">P</h4>
             </div>
-            <div ref={lMoveRef} className="relative -bottom-14">
+            <div ref={lMoveRef} className="relative lg:-bottom-14">
               <GsapMagnetic>
                 <span className="lg:block hidden mouse-gradient text-2xl py-3 px-16 rotate-[-20deg] absolute bottom-28 -left-16 rounded-full">
                   Mouse
@@ -114,10 +150,10 @@ const IntroSection = () => {
               </GsapMagnetic>
               <h4 className="gradient-text">L</h4>
             </div>
-            <div ref={secondMoveRef} className="relative -top-20 ">
+            <div ref={secondMoveRef} className="relative lg:-top-20 ">
               <h4 className="gradient-text">U</h4>
             </div>
-            <div ref={gMoveRef} className="relative -bottom-14">
+            <div ref={gMoveRef} className="relative lg:-bottom-14">
               <GsapMagnetic>
                 <span className="lg:block hidden dynamic-gradient text-2xl py-3 px-16 rotate-[30deg] absolute top-36 -left-16 rounded-full">
                   Dynamic
@@ -125,7 +161,7 @@ const IntroSection = () => {
               </GsapMagnetic>
               <h4 className="gradient-text">G</h4>
             </div>
-            <div ref={thirdMoveRef} className="relative -top-20 ">
+            <div ref={thirdMoveRef} className="relative lg:-top-20 ">
               <GsapMagnetic>
                 <span className="lg:block hidden image-gradient text-2xl py-3 px-16 rotate-[-30deg] absolute bottom-20 -left-16 rounded-full">
                   Image
@@ -133,7 +169,7 @@ const IntroSection = () => {
               </GsapMagnetic>
               <h4 className="gradient-text">I</h4>
             </div>
-            <div ref={nMoveRef} className="relative -bottom-14">
+            <div ref={nMoveRef} className="relative lg:-bottom-14 ">
               <GsapMagnetic>
                 <span className="lg:block hidden background-gradient text-2xl py-3 px-14 rotate-[-30deg] absolute top-36 left-24 rounded-full">
                   Background
